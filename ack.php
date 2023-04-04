@@ -10,8 +10,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="favicon.png" rel="icon">
+  <!-- faviconns -->
+  <link href="faviconn.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -45,7 +45,7 @@
       <div class="row align-items-start">
         <div class="col-md-2">
           <ul class="custom-menu">
-            <li class="active"><a href="home.php">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="#about.php">About Me</a></li>
             <li><a href="services.php">Services</a></li>
             <li><a href="works.php">Works</a></li>
@@ -61,7 +61,7 @@
 
   <nav class="navbar navbar-light custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="home.php"><img src="favicon.png"> Portfolio Management & Enquiry ..</a>
+      <a class="navbar-brand" href="home.php"><img src="faviconn.png"> Portfolio Management & Enquiry ..</a>
       <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
         <span></span>
       </a>
