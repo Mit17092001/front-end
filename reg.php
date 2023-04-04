@@ -1,11 +1,12 @@
 <html>
     <head>
         
-        <link href="favicon.png" rel="icon">
+        <link href="faviconn.png" rel="icon">
         <style>
              body 
             {
                 font-family: "Inconsolata", monospace;
+                background-size:cover;
                 color: #0d1e2d;
                 background-image: url("background.jpg");
                 background-repeat: no-repeat;

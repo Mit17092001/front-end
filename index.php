@@ -1,9 +1,13 @@
+<?php
+    session_start();
+?>
 <html>
     <head>
-        <link href="favicon.png" rel="icon">
+        <link href="faviconn.png" rel="icon">
         <style>
             body 
             {
+                background-size:cover;
                 font-family: "Inconsolata", monospace;
                 color: #0d1e2d;
                 background-image: url("background.jpg");
