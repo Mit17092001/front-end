@@ -98,7 +98,7 @@
         </style>
     </head>
     <body>
-        <h1>To get details of worker first you should take subscription of our website.</h1>
+        <h1>To Hire professionals first purchase subscription of our website.</h1>
         <div class="container">
             <div class="box1">
                 <h3>Silver</h3>

@@ -130,7 +130,7 @@
                 <h3>Baby sitter</h3>
                 <span></span>
               </div>
-              <img class="img-fluid" src="baby-sitter.jpg">
+              <img class="img-fluid" src="baby sitter.jpg">
             </a>
           </div>
           <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
@@ -140,6 +140,11 @@
                 <span></span>
               </div>
               <img class="img-fluid" src="mechanic.jpg">
+            </a>
+          </div>
+          <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4" style="margin-top:50px;font-size:30px">
+            <a href="works.php" class="item-wrap fancybox">
+              See More...
             </a>
           </div>
         </div>
@@ -178,7 +183,7 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-4">
           <div class="col-5">
-            <h3 class="h3 heading">My Services</h3>
+            <h3 class="h3 heading">Our Services</h3>
             <p>In <span><b>Phase-1</b></span> we are providing basic needs for daily life. In <span><b>Phase-2</b></span> we are planning to go for luxurious service</p>
           </div>
         </div>

@@ -111,7 +111,7 @@
                 {
                     if($r['Role']==3 || $r['Role']==1)
                     {            
-                        if($password == $r['password'])
+                        if(password_verify($password,$r['password']))
                         {
                         // $_SESSION["name"]=$r['name'];
                             $_SESSION["e-mail"]=$r['e-mail'];
@@ -135,7 +135,7 @@
                         $y=mysqli_fetch_assoc($lp);
                         if(mysqli_num_rows($lp)==1)
                         {
-                            if($password == $r['password'])
+                            if(password_verify($password,$r['password']))
                             {
                                 $_SESSION["e-mail"]=$r['e-mail'];
                                 header("location:http://localhost/php/Css/home.php");
@@ -150,7 +150,7 @@
                         else
                         {
                         
-                            if($password == $r['password'])
+                            if(password_verify($password,$r['password']))
                             {
                                 $_SESSION["name"]=$r['name'];
                                 $_SESSION["e-mail"]=$r['e-mail'];

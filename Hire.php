@@ -123,8 +123,9 @@
                 $city=$_POST['city'];
                 $state= "Gujarat";
                 $country="India";
+                $profile=$_GET['id'];
                 $pin=$_POST['pin'];
-                $sql="INSERT INTO `location`(`address`, `city`, `pin-code`) VALUES ('$add','$city','$pin') ";
+                $sql="INSERT INTO `location`(`address`, `city`, `pin-code`,`profile`) VALUES ('$add','$city','$pin','$profile') ";
                 $sp=mysqli_query($conn,$sql);
                 header("location:http://localhost/php/myportfolio/ack.php");
             }
