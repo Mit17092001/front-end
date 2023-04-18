@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- faviconns -->
-  <link href="logo.png" rel="icon">
+  <link href="faviconn.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -72,14 +72,13 @@
         <div class="row mb-5 align-items-end">
           <div class="col-md-6" data-aos="fade-up">
 
-            <h2>About Me</h2>
-            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut
-              officiis explicabo inventore.</p>
+            <h2>About Us</h2>
+            <p class="mb-0"></p>
           </div>
 
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
             <h3 class="h3 mb-4">Skills</h3>
             <ul class="list-unstyled">
@@ -138,19 +137,16 @@
                 </div>
               </li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
-            <p><img src="assets/img/person_1_sq.jpg" alt="Image" class="img-fluid"></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dignissimos delectus minima reprehenderit
-              molestias illo dolorem et, odio!</p>
-            <p>Fuga fugit distinctio delectus iure vitae consequatur excepturi, mollitia, consectetur molestias sapiente
-              rem consequuntur, illum adipisci, sed obcaecati!</p>
-            <p>Ex, dolorem qui voluptas reprehenderit provident, ad ipsum iure a consequatur voluptatem incidunt nobis.
-              Vitae reiciendis quae ex.</p>
-            <p>Optio consectetur culpa nemo, fugit pariatur veniam voluptate laudantium rerum fuga dolor in maiores ea
-              nisi voluptatibus. Minus?</p>
-            <p><a href="#" class="readmore">Download my CV</a></p>
+            <p><img src="myphoto.jpeg" alt="Image" class="img-fluid"></p>
+            <h1>Hello, User</h1>
+            <p>PM&E is stands for porfolio management and enquiry.</p>
+            <p>We are here to provide you professinals to make your daily life smooth. You can just Hire professinals by just sitting on the couch.</p>
+            <p>Currently we are working in cities like Ahmedabad, Surat, Vadodara, Gandhinagar. Our <span style="font-size:20px"><b>GOAL</b></span> is to reach to all cities of India</p>
+            <p></p>
+            <p><a href="https://www.ncodetechnologies.com/" class="readmore">Click here to go to our parent site</a></p>
           </div>
 
         </div>

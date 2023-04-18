@@ -3,6 +3,7 @@
 ?>
 <html>
     <head>
+        <title> Login </title>
         <link href="faviconn.png" rel="icon">
         <style>
             body 
@@ -109,7 +110,7 @@
                 $r=mysqli_fetch_assoc($op);
                 if(mysqli_num_rows($op)==1)
                 {
-                    if($r['Role']==3 || $r['Role']==1)
+                    if($r['is_verified']==1)
                     {            
                         if(password_verify($password,$r['password']))
                         {
@@ -130,44 +131,48 @@
                     }
                     else
                     {
-                        $sql="SELECT * FROM `profile` WHERE `e-mail`='$email'";
-                        $lp=mysqli_query($conn,$sql);
-                        $y=mysqli_fetch_assoc($lp);
-                        if(mysqli_num_rows($lp)==1)
-                        {
-                            if(password_verify($password,$r['password']))
-                            {
-                                $_SESSION["e-mail"]=$r['e-mail'];
-                                header("location:http://localhost/php/Css/home.php");
-                            }
-                            else
-                            {
-                                $pErr="**invalid password";
-                                echo $pErr;     
-                            
-                            }
-                        }
-                        else
-                        {
-                        
-                            if(password_verify($password,$r['password']))
-                            {
-                                $_SESSION["name"]=$r['name'];
-                                $_SESSION["e-mail"]=$r['e-mail'];
-                                if(isset($_SESSION['e-mail']))
-                                {
-                                    header("location:http://localhost/php/Css/home3.php");
-                                }
-                            }        
-                            else
-                            {
-                                $pErr="**invalid password";
-                                echo $pErr;     
-                              
-                            }
-                        }
-                    
+                        echo "**User is not verified.";
                     }
+                //     else
+                //     {
+                //         $sql="SELECT * FROM `profile` WHERE `e-mail`='$email'";
+                //         $lp=mysqli_query($conn,$sql);
+                //         $y=mysqli_fetch_assoc($lp);
+                //         if(mysqli_num_rows($lp)==1)
+                //         {
+                //             if(password_verify($password,$r['password']))
+                //             {
+                //                 $_SESSION["e-mail"]=$r['e-mail'];
+                //                 header("location:http://localhost/php/Css/home.php");
+                //             }
+                //             else
+                //             {
+                //                 $pErr="**invalid password";
+                //                 echo $pErr;     
+                            
+                //             }
+                //         }
+                //         else
+                //         {
+                        
+                //             if(password_verify($password,$r['password']))
+                //             {
+                //                 $_SESSION["name"]=$r['name'];
+                //                 $_SESSION["e-mail"]=$r['e-mail'];
+                //                 if(isset($_SESSION['e-mail']))
+                //                 {
+                //                     header("location:http://localhost/php/Css/home3.php");
+                //                 }
+                //             }        
+                //             else
+                //             {
+                //                 $pErr="**invalid password";
+                //                 echo $pErr;     
+                              
+                //             }
+                //         }
+                    
+                //     }
                 }
                 else
                 {

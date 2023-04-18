@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact page</title>
+  <title>Contact Us</title>
   
   <link href="faviconn.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -107,7 +107,7 @@
             <ul class="list-unstyled">
               <li class="mb-3">
                 <strong class="d-block mb-1">Address</strong>
-                <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+                <span>302, Shoppers Plaza, 4, Chimanlal Girdharlal Rd, Navrangpura,<br> Ahmedabad, Gujarat, 380009<br>India.</span>
               </li>
               <li class="mb-3">
                 <strong class="d-block mb-1">Phone</strong>
@@ -115,7 +115,7 @@
               </li>
               <li class="mb-3">
                 <strong class="d-block mb-1">Email</strong>
-                <span>youremail@domain.com</span>
+                <span>homeservice.pme@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -101,7 +101,7 @@
                   <li>car cleaning</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Hire maid</a></p>
+                <p><a href="Hire.php?id=Home-maid" class="readmore">Hire maid</a></p>
               </div>
             </div>
           </div>
