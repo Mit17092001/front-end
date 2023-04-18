@@ -98,7 +98,7 @@
                   <li>Home furniture</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Hire Carpenter</a></p>
+                <p><a href="Hire.php?id=carpenter" class="readmore">Hire Carpenter</a></p>
               </div>
             </div>
           </div>

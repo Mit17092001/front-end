@@ -100,7 +100,7 @@
                   <li>Appliance repair</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Hire Electrician</a></p>
+                <p><a href="Hire.php?id=electrician" class="readmore">Hire Electrician</a></p>
               </div>
             </div>
           </div>

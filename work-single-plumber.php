@@ -101,7 +101,7 @@
                   <li>instalation of bathroom sink and vanity</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Hire Plumber</a></p>
+                <p><a href="Hire.php?id=plumber" class="readmore">Hire Plumber</a></p>
               </div>
             </div>
           </div>

@@ -93,7 +93,7 @@
                 </div>
 
                 
-                <p><a href="#" class="readmore">Hire person</a></p>
+                <p><a href="Hire.php?id=milk-man" class="readmore">Hire person</a></p>
               </div>
             </div>
           </div>

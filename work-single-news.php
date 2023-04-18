@@ -91,7 +91,7 @@
                   <p>Get daily news-paper at your door-step.</p>
 
                 </div>
-              <p><a href="#" class="readmore">Hire Person</a></p>
+                <p><a href="Hire.php?id=daily-news" class="readmore">Hire Person</a></p>
               </div>
             </div>
           </div>

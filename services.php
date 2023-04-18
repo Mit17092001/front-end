@@ -112,12 +112,12 @@
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-5">
               <i class="bi bi-tools"></i>
-              <h4 class="h4 mb-2">Plumbing, carpentry</h4>
+              <h4 class="h4 mb-2">Plumbing & carpentry</h4>
               <p>We have skilled plumbers and carpenters which can make your house running and attractive. </p>
               <ul class="list-unstyled list-line">
                 <a href="work-single-plumber.php"><li>Plumbing service</li></a>
                 <a href="work-single-car.php"><li>carpentry service</li></a>
-                <a href="work-single-car.php"><li>Celling-pop & design  service</li></a>
+                <a href="work-single-car.php"><li>Celling-POP & design  service</li></a>
               </ul>
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-5">

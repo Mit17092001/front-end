@@ -92,7 +92,7 @@
                   <p>Safty is my duty.</p>
 
                 </div>
-                <p><a href="#" class="readmore">Hire Security-Guard</a></p>
+                <p><a href="Hire.php?id=security" class="readmore">Hire Security-Guard</a></p>
               </div>
             </div>
           </div>

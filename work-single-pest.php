@@ -100,7 +100,7 @@
                   <li>Wood pest control</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Hire worker</a></p>
+                <p><a href="Hire.php?id=pest-control" class="readmore">Hire worker</a></p>
               </div>
             </div>
           </div>

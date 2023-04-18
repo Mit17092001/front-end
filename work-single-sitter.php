@@ -100,7 +100,7 @@
                   <li>Baby-bathing</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Hire Baby-sitter</a></p>
+                <p><a href="Hire.php?id=Baby-sitter" class="readmore">Hire Baby-sitter</a></p>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        
+        <title> Register </title>
         <link href="faviconn.png" rel="icon">
         <style>
              body 
@@ -75,7 +75,10 @@
                 color:black;
                 font-size:25px;
             }
-
+            .login
+            {
+                margin-bottom:10px;
+            }
         </style>
     </head>
     <body>
@@ -97,37 +100,91 @@
                     <button type="submit" name="submit">submit</button>
                 </div>
             </form>
-            <?php
-                include('conf.php');
-                if(isset($_POST['submit']))
-                {
-                    $name=$_POST['name'];
-                    $email=$_POST['e-mail'];
-                    $password=$_POST['password'];
-                    $role=3;
-                    $hql="SELECT * from `user` where `e-mail`='$email';";
-                    $op=mysqli_query($conn,$hql);
-                    if(mysqli_num_rows($op)==0)
-                    {
-                        $sql = "INSERT INTO `user`(`name`,  `e-mail`, `password`,`Role` ) VALUES ('$name','$email','$password','$role')";
-                        $result = $conn->query($sql);
-                        //$r=mysqli_fetch_assoc($result);  
-                        if ($result == TRUE) 
-                        {
-                            header("location:http://localhost/php/myportfolio/index.php");
-                        }
-                        $conn->close(); 
-                    }
-                    else
-                    {
-                        echo "<br>";
-                        echo "Email already exist. Go to login page.";
-                    }
-                } 
-            ?>
             <div class="login">
                 <a href="index.php">Login Here</a>
             </div>
+            <?php
+                // include('conf.php');
+                // if(isset($_POST['submit']))
+                // {
+                //     $name=$_POST['name'];
+                //     $email=$_POST['e-mail'];
+                //     $password =password_hash( $_POST['password'],PASSWORD_BCRYPT);
+                //     $role=3;
+                //     $hql="SELECT * from `user` where `e-mail`='$email';";
+                //     $op=mysqli_query($conn,$hql);
+                //     if(mysqli_num_rows($op)==0)
+                //     {
+                //         $sql = "INSERT INTO `user`(`name`,  `e-mail`, `password`,`Role` ) VALUES ('$name','$email','$password','$role')";
+                //         $result = $conn->query($sql);
+                //         //$r=mysqli_fetch_assoc($result);  
+                //         if ($result == TRUE) 
+                //         {
+                //             header("location:http://localhost/php/myportfolio/index.php");
+                //         }
+                //         $conn->close(); 
+                //     }
+                //     else
+                //     {
+                //         echo "<br>";
+                //         echo "Email already exist. Go to login page.";
+                //     }
+                // } 
+        
+              
+        include "conf.php";
+       
+function sendmail($email,$vcode)
+    {        
+        $receiver = $email;
+        $subject = "Email verification";
+        // $body = "Hi, Hwt we are happy to tell you that we have started our website kindly join with us for your comfort";
+        $body = "Hi, there to verify your mail click here <a href='http://10.16.16.65/php/myportfolio/verify.php?email=$email & vcode=$vcode'>VERIFY</a>";
+        $sender = "From:homeservice.pme@gmail.com";
+        $sender  .= 'MIME-Version: Homeservice' . "\r\n";
+        $sender  .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+        if(mail($receiver, $subject, $body, $sender))
+        {
+            echo "**Email sent successfully to $receiver";
+        }
+        else
+        {
+            echo "**Sorry, failed while sending mail!";
+        }
+    }
+        
+        if (isset($_POST['submit'])) 
+        {
+            $name=$_POST['name'];
+            $vcode=bin2hex(random_bytes(16));
+            $email = $_POST['e-mail'];
+            $role=3;
+            $password =password_hash( $_POST['password'],PASSWORD_BCRYPT);
+            $hql="SELECT * from `user` where `e-mail`='$email';";
+            $op=mysqli_query($conn,$hql);
+
+            if(mysqli_num_rows($op)==0)
+            {
+                $sql = "INSERT INTO `user`(`name`,  `e-mail`, `password`,`Role`,`vcode`) VALUES ('$name','$email','$password','$role','$vcode')";
+
+                
+
+                if (mysqli_query($conn,$sql) && sendmail($email,$vcode)) 
+                {
+                echo "**New record created successfully.";
+                }
+
+                $conn->close(); 
+            }
+            else
+            {
+                echo "<br>";
+                echo "**Email already exist. Go to login page.";
+            }
+            }
+        ?>
+            
         </div>
     </body>
 </html>

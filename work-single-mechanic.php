@@ -100,7 +100,7 @@
                   <li>vehical service</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Hire mechanic</a></p>
+                <p><a href="Hire.php?id=mechanic" class="readmore">Hire mechanic</a></p>
               </div>
             </div>
           </div>

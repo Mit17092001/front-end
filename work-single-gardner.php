@@ -99,7 +99,7 @@
                   <li>maintain garden</li>
                 </ul>
                 
-                <p><a href="Hire.php" class="readmore">Hire Gardner</a></p>
+                <p><a href="Hire.php?id=gardner" class="readmore">Hire Gardner</a></p>
               </div>
             </div>
           </div>
