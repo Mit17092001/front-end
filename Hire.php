@@ -23,7 +23,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylee.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>        
 
@@ -61,7 +61,20 @@
             <li><a href="services.php">Services</a></li>
             <li><a href="works.php">Works</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><button onclick="myfunction()" style="background-color:#0d1e2d; color: white;padding-left:0px; border:none;">Log-out</button></li>
+            <script>
+              function myfunction()
+            {
+                if (confirm("Really want to logout !!")) 
+                {
+                    window.location.assign("logout.php")
+                } 
+                else 
+                {
+                    window.location.assign("home.php")
+                }
+            }
+            </script>
           </ul>
         </div>
       </div>

@@ -1,18 +1,21 @@
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Contact Us</title>
-  
+
   <link href="faviconn.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylee.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,10 +31,23 @@
             <li><a href="services.php">Services</a></li>
             <li><a href="works.php">Works</a></li>
             <li class="active"><a href="contact.php">Contact</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><button onclick="myfunction()" style="background-color:#0d1e2d; color: white;padding-left:0px; border:none;">Log-out</button></li>
+            <script>
+              function myfunction()
+            {
+                if (confirm("Really want to logout !!")) 
+                {
+                    window.location.assign("logout.php")
+                } 
+                else 
+                {
+                    window.location.assign("home.php")
+                }
+            }
+            </script>
           </ul>
         </div>
-        
+
       </div>
 
     </div>
@@ -91,23 +107,23 @@
             </form>
             <?php
             include("conf.php");
-              if (isset($_POST['submit'])) 
-              {
-                $name=$_POST['name'];
-                $email=$_POST['email'];
-                $subject=$_POST['subject'];
-                $msg=$_POST['message'];
-                $sql="INSERT into `contact` (`name`, `e-mail`, `subject`, `message`) VALUES ('$name','$email','$subject','$msg')";
-                $sp=mysqli_query($conn,$sql);
-                header("location:http://localhost/php/myportfolio/home.php");
-              }
+            if (isset($_POST['submit'])) {
+              $name = $_POST['name'];
+              $email = $_POST['email'];
+              $subject = $_POST['subject'];
+              $msg = $_POST['message'];
+              $sql = "INSERT into `contact` (`name`, `e-mail`, `subject`, `message`) VALUES ('$name','$email','$subject','$msg')";
+              $sp = mysqli_query($conn, $sql);
+              header("location:http://localhost/php/myportfolio/home.php");
+            }
             ?>
           </div>
           <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
             <ul class="list-unstyled">
               <li class="mb-3">
                 <strong class="d-block mb-1">Address</strong>
-                <span>302, Shoppers Plaza, 4, Chimanlal Girdharlal Rd, Navrangpura,<br> Ahmedabad, Gujarat, 380009<br>India.</span>
+                <span>302, Shoppers Plaza, 4, Chimanlal Girdharlal Rd, Navrangpura,<br> Ahmedabad, Gujarat,
+                  380009<br>India.</span>
               </li>
               <li class="mb-3">
                 <strong class="d-block mb-1">Phone</strong>
@@ -141,7 +157,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
           -->
-          
+
           </div>
         </div>
         <div class="col-sm-6 social text-md-end">
@@ -154,7 +170,8 @@
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>

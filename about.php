@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -23,7 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylee.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyPortfolio
@@ -47,10 +49,23 @@
             <li><a href="services.php">Services</a></li>
             <li><a href="works.php">Works</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><button onclick="myfunction()" style="background-color:#0d1e2d; color: white;padding-left:0px; border:none;">Log-out</button></li>
+            <script>
+              function myfunction()
+            {
+                if (confirm("Really want to logout !!")) 
+                {
+                    window.location.assign("logout.php")
+                } 
+                else 
+                {
+                    window.location.assign("home.php")
+                }
+            }
+            </script>
           </ul>
         </div>
-        
+
       </div>
 
     </div>
@@ -139,17 +154,19 @@
             </ul>
           </div> -->
 
-          <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
-            <p><img src="myphoto.jpeg" alt="Image" class="img-fluid"></p>
-            <h1>Hello, User</h1>
-            <p>PM&E is stands for porfolio management and enquiry.</p>
-            <p>We are here to provide you professinals to make your daily life smooth. You can just Hire professinals by just sitting on the couch.</p>
-            <p>Currently we are working in cities like Ahmedabad, Surat, Vadodara, Gandhinagar. Our <span style="font-size:20px"><b>GOAL</b></span> is to reach to all cities of India</p>
-            <p></p>
-            <p><a href="https://www.ncodetechnologies.com/" class="readmore">Click here to go to our parent site</a></p>
-          </div>
-
+        <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
+          <p><img src="myphoto.jpeg" alt="Image" class="img-fluid"></p>
+          <h1>Hello, User</h1>
+          <p>PM&E is stands for porfolio management and enquiry.</p>
+          <p>We are here to provide you professinals to make your daily life smooth. You can just Hire professinals by
+            just sitting on the couch.</p>
+          <p>Currently we are working in cities like Ahmedabad, Surat, Vadodara, Gandhinagar. Our <span
+              style="font-size:20px"><b>GOAL</b></span> is to reach to all cities of India</p>
+          <p></p>
+          <p><a href="https://www.ncodetechnologies.com/" class="readmore">Click here to go to our parent site</a></p>
         </div>
+
+      </div>
 
       </div>
 
@@ -170,7 +187,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
           -->
-           
+
           </div>
         </div>
         <div class="col-sm-6 social text-md-end">
@@ -183,7 +200,8 @@
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
