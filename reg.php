@@ -8,7 +8,7 @@
                 font-family: "Inconsolata", monospace;
                 background-size:cover;
                 color: #0d1e2d;
-                background-image: url("background.jpg");
+                background-image: url("Backgr.jpg");
                 background-repeat: no-repeat;
             }
             .field
@@ -22,12 +22,13 @@
                 margin:auto;
                 margin-top:130px;
                 border-style: none;
-                border-color:#353738;
-                padding-left:20px;
+                border-color:white;
+                padding-left:30px;
+                padding-top:30px;
                 width:300px;
-                padding-right:20px;
-                padding-bottom: 10px;
-                background-color: rgba(255,255,255,0.1);
+                padding-right:30px;
+                padding-bottom: 20px;
+                background-color:rgba(255,255,255,0.4)
             }
             .field input 
             {
@@ -103,6 +104,7 @@
             <div class="login">
                 <a href="index.php">Login Here</a>
             </div>
+            
             <?php
                 // include('conf.php');
                 // if(isset($_POST['submit']))
@@ -167,9 +169,6 @@ function sendmail($email,$vcode)
             if(mysqli_num_rows($op)==0)
             {
                 $sql = "INSERT INTO `user`(`name`,  `e-mail`, `password`,`Role`,`vcode`) VALUES ('$name','$email','$password','$role','$vcode')";
-
-                
-
                 if (mysqli_query($conn,$sql) && sendmail($email,$vcode)) 
                 {
                 echo "**New record created successfully.";

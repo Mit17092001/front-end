@@ -11,7 +11,7 @@
                 background-size:cover;
                 font-family: "Inconsolata", monospace;
                 color: #0d1e2d;
-                background-image: url("background.jpg");
+                background-image: url("Backgr.jpg");
                 background-repeat: no-repeat;
             }
             .field
@@ -25,12 +25,15 @@
                 margin:auto;
                 margin-top:130px;
                 border-style: none;
+                padding-top:30px;
                 border-color:#353738;
-                padding-left:20px;
+                padding-left:30px;
                 width:300px;
-                padding-right:20px;
-                padding-bottom: 10px;
-                background-color: rgba(255,255,255,0.1);
+                padding-right:30px;
+                padding-bottom:20px;
+                background-color:rgba(255,255,255,0.4);
+                
+
             }
             .field input 
             {
@@ -89,7 +92,7 @@
         <br>
         <form method="post" action="">
             <div class="field">
-                <input type="text" name="email" placeholder="E-mail" required class="text"><br>
+                <input type="text" name="email" placeholder="e-mail" required class="text"><br>
             </div>
             <div class="field">
                 <input type="password" name="password" placeholder="password" required class="text"><br>
@@ -114,7 +117,7 @@
                     {            
                         if(password_verify($password,$r['password']))
                         {
-                        // $_SESSION["name"]=$r['name'];
+                            $_SESSION["alert"]='login';
                             $_SESSION["e-mail"]=$r['e-mail'];
                             if(isset($_SESSION['e-mail']))
                             {?>

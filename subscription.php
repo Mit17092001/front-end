@@ -8,8 +8,10 @@
         <style>
             body
             {
-                /* background-image: url("sub.jpg"); */
+                background-image: url("sub.jpg");
                 font-family: "Inconsolata", monospace;
+                background-repeat: no-repeat;
+                background-size:cover;
             }
             .box1
             {

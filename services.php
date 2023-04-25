@@ -23,7 +23,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylee.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyPortfolio
@@ -47,7 +47,20 @@
             <li class="active"><a href="services.php">Services</a></li>
             <li><a href="works.php">Works</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><button onclick="myfunction()" style="background-color:#0d1e2d; color: white;padding-left:0px; border:none;">Log-out</button></li>
+            <script>
+              function myfunction()
+            {
+                if (confirm("Really want to logout !!")) 
+                {
+                    window.location.assign("logout.php")
+                } 
+                else 
+                {
+                    window.location.assign("home.php")
+                }
+            }
+            </script>
           </ul>
         </div>
         
@@ -85,7 +98,7 @@
 
           <div class="row">
 
-            <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
               <i class="bi bi-paint-bucket"></i>
               <h4 class="h4 mb-2">Cleaning Service & pest control</h4>
               <p>We are providing different kind of cleaning services and pest control.</p>
@@ -98,7 +111,7 @@
                 <a href="work-single-pest.php"><li>Pest-control</li></a>
               </ul>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
               <i class="bi bi-house"></i>
               <h4 class="h4 mb-2">Home service & security</h4>
               <p>We are here to provide you security and basic needs for daily life.</p>
@@ -110,7 +123,7 @@
                 <a href="work-single-reno.php"><li>Renovation services</li></a>
               </ul>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
               <i class="bi bi-tools"></i>
               <h4 class="h4 mb-2">Plumbing & carpentry</h4>
               <p>We have skilled plumbers and carpenters which can make your house running and attractive. </p>
@@ -120,7 +133,7 @@
                 <a href="work-single-car.php"><li>Celling-POP & design  service</li></a>
               </ul>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
               <i class="bi bi-lightning-charge"></i>
               <h4 class="h4 mb-2">Electricians & Appliance repair</h4>
               <p>We can make your house safe from electricity</p>

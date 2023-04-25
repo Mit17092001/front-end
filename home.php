@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html lang="en">
 
 <head>
@@ -23,7 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylee.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>        
 
@@ -49,7 +51,20 @@
             <li><a href="services.php">Services</a></li>
             <li><a href="works.php">Works</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="logout.php">Log-out</a></li>
+            <li><button onclick="myfunction()" style="background-color:#0d1e2d; color: white;padding-left:0px; border:none;">Log-out</button></li>
+            <script>
+              function myfunction()
+            {
+                if (confirm("Really want to logout !!")) 
+                {
+                    window.location.assign("logout.php")
+                } 
+                else 
+                {
+                    window.location.assign("home.php")
+                }
+            }
+            </script>
           </ul>
         </div>
         
@@ -71,6 +86,7 @@
 
     <!-- ======= Works Section ======= -->
     <section class="section site-portfolio">
+   
       <div class="container">
         <div class="row mb-5 align-items-center">
           <div class="col-md-12 col-lg-5 mb-4 mb-lg-0" data-aos="fade-up">
@@ -154,6 +170,7 @@
 
     <!-- ======= Clients Section ======= -->
     <section class="section">
+    
       <div class="container">
         <div class="row justify-content-center text-center mb-4">
           <div class="col-5">
@@ -162,16 +179,16 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-4 col-sm-4 col-md-3">
+          <div class="col-4 col-sm-3 col-md-3">
             <a href="#" class="client-logo"><img src="Ahmedabad.jpg" alt="Image" class="img-fluid"></a>
           </div>
-          <div class="col-4 col-sm-4 col-md-3">
+          <div class="col-4 col-sm-3 col-md-3">
             <a href="#" class="client-logo"><img src="vadodara.jpg" alt="Image" class="img-fluid"></a>
           </div>
-          <div class="col-4 col-sm-4 col-md-3">
+          <div class="col-4 col-sm-3 col-md-3">
             <a href="#" class="client-logo"><img src="surat.jpg" alt="Image" class="img-fluid"></a>
           </div>
-          <div class="col-4 col-sm-4 col-md-3">
+          <div class="col-4 col-sm-3 col-md-3">
             <a href="#" class="client-logo"><img src="gandhinagar.jpg" alt="Image" class="img-fluid"></a>
           </div>
           
@@ -253,7 +270,7 @@
                 <div class="testimonial">
                   <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
                   <blockquote>
-                    <p>This website is really amazing. This site solved my so many daily life problem.I am waiting for phase-2 of this site.</p>
+                    <p>This website is really amazing. This site solved my so many daily life problem.</p>
                   </blockquote>
                   <p>&mdash; Jean Hicks</p>
                 </div>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Home-maid</title>
+  <title>Successfully subscribed page</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -24,6 +26,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/stylee.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
   <!-- =======================================================
   * Template Name: MyPortfolio
@@ -45,25 +49,23 @@
             <li><a href="home.php">Home</a></li>
             <li><a href="#about.php">About Me</a></li>
             <li><a href="services.php">Services</a></li>
-            <li class="active"><a href="works.php">Works</a></li>
+            <li><a href="works.php">Works</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><button onclick="myfunction()" style="background-color:#0d1e2d; color: white;padding-left:0px; border:none;">Log-out</button></li>
+            <li><button onclick="myfunction()"
+                style="background-color:#0d1e2d; color: white;padding-left:0px; border:none;">Log-out</button></li>
             <script>
-              function myfunction()
-            {
-                if (confirm("Really want to logout !!")) 
-                {
-                    window.location.assign("logout.php")
-                } 
-                else 
-                {
-                    window.location.assign("home.php")
+              function myfunction() {
+                if (confirm("Really want to logout !!")) {
+                  window.location.assign("logout.php")
                 }
-            }
+                else {
+                  window.location.assign("home.php")
+                }
+              }
             </script>
           </ul>
         </div>
-        
+
       </div>
 
     </div>
@@ -77,54 +79,29 @@
       </a>
     </div>
   </nav>
-
-  <main id="main">
-
-    <section class="section">
-      <div class="container">
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="site-section pb-0">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-md-8" data-aos="fade-up">
-              <img src="House-maid.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">House Maid</h3>
-                <p class="mb-4"><span class="text-muted"></span></p>
-
-                <div class="mb-5">
-                  <p>I am here to make your house clean and healthy.</p>
-
-                </div>
-
-                <h4 class="h4 mb-3">What I did</h4>
-                <ul class="list-unstyled list-line mb-5">
-                  <li>Laundry</li>
-                  <li>House/office Cleaning</li>
-                  <li>Shafe service</li>
-                  <li>car cleaning</li>
-                </ul>
-
-                <p><a href="Hire.php?id=Home-maid" class="readmore">Hire maid</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- ======= Testimonials Section ======= -->
-
-  </main><!-- End #main -->
-
+  <main style="text-align:center;margin-top:150px;margin-bottom:130px">
+    <p>We have received your request successfully. Your subscription successfully done. Enjoy our Services.</p>
+    <h1>Thank You</h1>
+  </main>
+  <?php
+  include('conf.php');
+  session_start();
+  $email = $_SESSION['e-mail'];
+  $id = $_GET['id'];
+  $nql = "SELECT * FROM `user` WHERE `e-mail`='$email'";
+  $np = mysqli_query($conn, $nql);
+  $sql = "SELECT * FROM `sub` WHERE `e-mail`='$email'";
+  $sp = mysqli_query($conn, $sql);
+  $rn = mysqli_fetch_assoc($np);
+  $name = $rn['name'];
+  if (mysqli_num_rows($sp) > 0) {
+    $mql = "UPDATE `sub` SET `name`='$name' WHERE `e-mail`='$email'";
+    $mp=mysqli_query($conn,$mql);
+  } else {
+    $iql = "INSERT INTO `sub`(`name`, `e-mail`) VALUES ('$name','$email')";
+    $ip=mysqli_query($conn,$iql);
+  }
+  ?>
   <!-- ======= Footer ======= -->
   <footer class="footer" role="contentinfo">
     <div class="container">
@@ -138,7 +115,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
           -->
-            
+
           </div>
         </div>
         <div class="col-sm-6 social text-md-end">
@@ -151,7 +128,8 @@
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
