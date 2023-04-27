@@ -89,31 +89,42 @@
       </a>
     </div>
   </nav>
-  <form method="POST"  style="margin:auto; margin-top:150px;width:400px;margin-bottom:160px;">
-          
-                
-                City  <select name="city" >
-                            <option value="none" selected disabled hidden>Select an Option</option>
-                            <option value="Ahmedabad">Ahmedabad</option>
-                            <option value="Surat">Surat</option>
-                            <option value="vadodara">vadodara</option>
-                            <option value="Gandhinagar">Gandhinagar</option>
-                        </select>
-              
-                <div class="field" style="width:50%;height:50px;margin-top:20px">
-                    <button type="submit" name="submit" style="height:100%;width:100%;background-color:mediumseagreen; border:none; ">Check availability</button>
+  <form method="POST"  style="margin:auto; margin-top:100px;width:400px;margin-bottom:60px;">
+            <table>
+                <tr>
+                    <td>Address</td><td>:</td><td> <textarea name="add" rows="5" cols="31" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        :
+                    </td>
+                    <td>  
+                        <?php echo $_GET['city']; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>pincode</td><td>:</td><td> <input type="number" name="pin" required></td> 
+                </tr>
+                </table>
+                <div class="field" style="width:80%;height:50px;margin:auto;margin-top:20px">
+                    <button type="submit" name="submit" style="height:100%;width:100%;background-color:mediumseagreen; border:none; ">Submit</button>
                 </div>
         </form>
         <?php
           include('conf.php');
             if($_SERVER["REQUEST_METHOD"]=="POST")
             {
-                
-                $id=$_POST['city'];
-              
-                $profile=$_GET['id'];
-                
-                header("location:http://localhost/php/myportfolio/profile.php?id=$id & prof=$profile");
+                $add=$_POST['add'];
+                $city=$_GET['city'];
+                $state= "Gujarat";
+                $country="India";
+                $id=$_GET['id'];
+                $pin=$_POST['pin'];
+                $email=$_SESSION['e-mail'];
+                $sql="INSERT INTO `location`(`address`, `city`, `pin-code`,`profile`,`email`) VALUES ('$add','$city','$pin','profile','$email') ";
+                $sp=mysqli_query($conn,$sql);
+                header("location:http://localhost/php/myportfolio/ack.php");
             }
         ?>
 
