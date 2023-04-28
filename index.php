@@ -98,10 +98,13 @@
                 <input type="password" name="password" placeholder="password" required class="text"><br>
             </div>
             <div class="field">
-                <button id="log" name="Login" value="Login" class="button">Login</button><br>
-            </div>        
+                <button id="log" name="Login" value="Login" class="button">Login</button>
+            </div> <br>   
+            <a href="forgot.php" style="font-size:15px">Forgot your password?</a>    
         </form>
+            
         <?php 
+            
             include('conf.php');
             if($_SERVER["REQUEST_METHOD"]=="POST")
             {   

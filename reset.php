@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title> Register </title>
+        <title> Reset password </title>
         <link href="faviconn.png" rel="icon">
         <style>
              body 
@@ -88,22 +88,19 @@
             <br>
             <br>        
             <form method='post'>
-                <div class="field">
-                    <input type="text" name="name" placeholder="Username" required>
-                </div>
-                <div class="field">
-                    <input type="text" name="e-mail" placeholder="e-mail" required>
-                </div>
+               
                 <div class="field">
                     <input type="password" name="password" placeholder="password" required>
                 </div>
                 <div class="field">
+                    <input type="password" name="co-password" placeholder="confirm password" required>
+                </div>
+                
+                <div class="field">
                     <button type="submit" name="submit">submit</button>
                 </div>
             </form>
-            <div class="login">
-                <a href="index.php">Login Here</a>
-            </div>
+           
             
             <?php
                 // include('conf.php');
@@ -136,59 +133,22 @@
               
         include "conf.php";
        
-function sendmail($email,$vcode)
-    {        
-        $receiver = $email;
-        $subject = "Email verification";
-        // $body = "Hi, Hwt we are happy to tell you that we have started our website kindly join with us for your comfort";
-        $body = "Hi, there to verify your mail click here <a href='http://localhost/php/myportfolio/verify.php?email=$email & vcode=$vcode'>VERIFY</a>";
-        $sender = "From:homeservice.pme@gmail.com";
-        $sender  .= 'MIME-Version: Homeservice' . "\r\n";
-        $sender  .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-        if(mail($receiver, $subject, $body, $sender))
-        {
-            echo "**Email sent successfully to $receiver";
-        }
-        else
-        {
-            echo "**Sorry, failed while sending mail!";
-        }
-    }
         
         if (isset($_POST['submit'])) 
         {
-            $name=$_POST['name'];
-            $vcode=bin2hex(random_bytes(16));
-            $email = $_POST['e-mail'];
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+            $password=$_POST['password'];
+            $copassword=$_POST['co-password'];
+            $email=$_GET['email'];
+            if($password==$copassword)
             {
-                
-                    ECHO "**Invalid email format";
-                  
+                $password=password_hash( $_POST['password'],PASSWORD_BCRYPT);
+                $hql="UPDATE `user` SET `password`='$password'  WHERE `e-mail`='$email'";
+                $op=mysqli_query($conn,$hql);
+                echo "** passwor updated successfully. Go To login page";
             }
             else
             {
-                $role=3;
-                $password =password_hash( $_POST['password'],PASSWORD_BCRYPT);
-                $hql="SELECT * from `user` where `e-mail`='$email';";
-                $op=mysqli_query($conn,$hql);
-
-                if(mysqli_num_rows($op)==0)
-                {
-                    $sql = "INSERT INTO `user`(`name`,  `e-mail`, `password`,`Role`,`vcode`) VALUES ('$name','$email','$password','$role','$vcode')";
-                    if (mysqli_query($conn,$sql) && sendmail($email,$vcode)) 
-                    {
-                    echo "**New record created successfully.";
-                    }
-
-                    $conn->close(); 
-                }
-                else
-                {
-                    echo "<br>";
-                    echo "**Email already exist. Go to login page.";
-                }
+                echo "**password and confirm password must be same";
             }
         }
         ?>

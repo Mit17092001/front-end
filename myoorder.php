@@ -117,7 +117,7 @@
             }
             else
             {
-                echo "Professinal is not available";
+                echo "You have no order list. Start with your first order";
             }
     ?>
   </main>
